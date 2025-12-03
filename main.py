@@ -76,7 +76,7 @@ class TweetsResponse(BaseModel):
 
 @app.get("/stocks", response_model=StockResponse)
 def get_stock(
-    symbol: str = "ECOPETROL.BO",
+    symbol: str = "EC",
     date: str = "2024-01-15",
 ):
     """
@@ -334,3 +334,4 @@ def get_tweets(
 @app.get("/")
 def read_root():
     return {"message": "API de métricas, noticias y tweets para tu agente GPT."}
+
